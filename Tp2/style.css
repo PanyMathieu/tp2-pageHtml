@@ -1,0 +1,209 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,500&display=swap');
+    /*N'oubliez pas que nous utilisons l'approche « Mobile First »,
+donc redimensionnez la largeur de votre navigateur à une largeur comparable à celle du téléphone. 
+Environ~385px de largeur (width)
+*/
+    /* définir notre font et enlever la margin par défaut du navigateur */
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+    }
+    /* taille et interligne des paragraphes et bloc des citations*/
+    
+    P,
+    blockquote {
+        font-size: •9em;
+        line-height: 1.6em;
+    }
+    /* enlever style de la liste et espace par défaut du navigateur*/
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    /* Définir une taille fixe au logo */
+    
+    .logo {
+        width: 130px;
+    }
+    /* display flex pour disposer les contenus sur toute la largeur de l'ecran*/
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* définissons notre propre largeur et margin */
+    
+    .menu {
+        width: 25px;
+        margin-top: 45%;
+    }
+    /* Réduire la taille de l'image
+"server" et le positionner au centre de l'écran */
+    
+    .server {
+        width: 40%;
+        margin: 2em 2em 2em 2em;
+    }
+    /* définir une taille de font pour le text ciblé */
+    
+    .subhead {
+        font-size: 1.1em;
+    }
+    
+    .blue-container {
+        background-color: #00C2FF;
+        width: 100%;
+        margin-top: 15%;
+        padding: 4em 0 2em;
+        /* top -> gauche et droite -> bottom */
+        color: #FFF;
+        transform: skewY(-2deg);
+        /* Devier le bloc de 2dégrés vers la gauche */
+        border-top-left-radius: 40px;
+    }
+    /* Dessiner carre sur le coin superieur droit du bloc */
+    
+    .blue-container:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: #00c2ff;
+        position: absolute;
+        top: -39px;
+        right: 0;
+    }
+    /* Dessiner un cercle sur le coin superieur droit du bloc.
+    le cercle de couper le carre, ce qui forme une belle deviation */
+    
+    .blue-container:after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        background-color: #FFF;
+        position: absolute;
+        top: -80px;
+        border-radius: 50%;
+        right: 0;
+    }
+    /* Bien que le bloc est dévier on veut garder nos textes a une orientation normale 
+    on devie les contenus du bloc de 2 degre vers la droite */
+    
+    .blue-container ul {
+        transform: skewY(2deg);
+    }
+    /* Espacer les items du bloc */
+    
+    .blue-container ul li {
+        margin-bottom: 3em;
+    }
+    /* Definir une padding et interlige pour le paragraphe du premier bloc*/
+    
+    .blue-container ul li p {
+        padding: 0 1.5em;
+        line-height: 1.8em;
+    }
+    /* Redimensionner les images */
+    
+    .blue-container img {
+        width: 14%;
+    }
+    /* Centrer tout les contenus se trouvant dans un container peu importe lequel*/
+    
+    .container {
+        text-align: center;
+        padding: .8em 1.2em;
+    }
+    
+    .gray-container {
+        background: #C9EFEF;
+        padding: 4em 0 2em;
+        margin-top: -2%;
+    }
+    /* créer de l'espace entre la première image et le second */
+    
+    .gray-container ul li:first-child {
+        margin-bottom: 4em;
+    }
+    /* supprimer les marges par defaut du navigateur sur la balise "figure" */
+    
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+    /* Mettre le texte en gras et changer la couleur du texte */
+    
+    figcaption {
+        font-weight: bold;
+        color: #00C2FD;
+    }
+    /* éloigner un peu le texte h2 du .gray-container */
+    
+    h2 {
+        margin-top: 7%;
+        font-weight: bold;
+    }
+    /* styliser le bouton */
+    /* Note : attention, l'espace est nécessaire autour du signe d'opération dans calc(),
+ sans quoi calc() risque de ne pas avoir d'effet. */
+    
+    .cta {
+        background: #00CC80;
+        width: calc(100% - 1em);
+        display: block;
+        color: white;
+        margin: 3% auto 7%;
+        text-decoration: none;
+        padding: .5em;
+        border-radius: 20px;
+        font-size: 1.2em;
+        font-weight: 600;
+        position: relative;
+        z-index: 4;
+    }
+    
+    .img-css {
+        padding: 0px;
+        text-align: right;
+        float: right;
+        width: 10%;
+    }
+    
+    .footer-container {
+        background-color: slategray;
+        width: 100%;
+        margin-top: 15%;
+        margin-bottom: -3%;
+        padding: 2em 0 4em;
+        /* top -> gauche et droite -> bottom */
+        color: #FFF;
+        transform: skewY(0deg);
+        /* Devier le bloc de 2dégrés vers la gauche */
+        border-top-right-radius: 40px;
+    }
+    /* Dessiner carre sur le coin superieur droit du bloc */
+    
+    .footer-container:before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: slategray;
+        position: absolute;
+        top: -39px;
+        left: 0;
+    }
+    /* Dessiner un cercle sur le coin superieur droit du bloc.
+    le cercle de couper le carre, ce qui forme une belle deviation */
+    
+    .footer-container:after {
+        content: "";
+        width: 80px;
+        height: 80px;
+        background-color: #C9EFEF;
+        position: absolute;
+        top: -80px;
+        border-radius: 50%;
+        left: 0;
+    }
